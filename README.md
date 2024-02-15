@@ -1,5 +1,6 @@
 # 🏦 setupsBank 
-A better way to keep and share setups for Assetto Corsa.
+A better way to keep and share setups for Assetto Corsa. 
+Unlocking also numerous integration possibilities!
 
 ## ❓ How does it work?
 It uses github action with issues to automatically add the setups. It's open-source, you can check it out!
