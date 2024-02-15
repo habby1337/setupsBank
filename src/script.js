@@ -19,8 +19,8 @@ if (isClosed && hasLabel && hasSetupTag) {
 
 	// fs.mkdirSync(`./setups/${carName}/`, { recursive: true });
 	// fs.mkdirSync(`./setups/${carName}/${trackName}/`, { recursive: true });
-	fs.mkdirSync(`./setups/${carName}`);
-	fs.mkdirSync(`./setups/${carName}/${trackName}`);
+	fs.mkdirSync(`./setups/${carName}`, { recursive: true });
+	fs.mkdirSync(`./setups/${carName}/${trackName}`, { recursive: true });
 	fs.writeFileSync(setupFilePath, setupBlob);
 
 	fs.writeFileSync(
