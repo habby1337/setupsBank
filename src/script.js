@@ -36,4 +36,6 @@ if (isClosed && hasLabel && hasSetupTag) {
 		"./commit-message.txt",
 		`Create setup for ${carName} at ${trackName} for ${username} approved by ${approvedBy}`,
 	);
+} else {
+	console.log("Issue not closed or doesn't have the correct label or doesn't have the [SETUP] tag");
 }
