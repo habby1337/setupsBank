@@ -1,0 +1,23 @@
+name: Create setup file
+on:
+  issues:
+    types:
+      - closed
+
+jobs:
+  create-setup-file:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check if issue meets criteria
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Run script
+        run: |
+          CONTEXT="$(echo '${{ toJson(github.event) }}')"
+          echo "$CONTEXT" > context.json  # Save the context to a file for debugging
+          node ./src/script.js

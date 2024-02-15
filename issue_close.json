@@ -1,0 +1,20 @@
+{
+	"action": "closed",
+	"sender": {
+		"login": "habby1337"
+	},
+	"issue": {
+		"state": "closed",
+		"number": 1,
+		"title": "[SETUP] bmw_m3_gt2@ks_nordschleife",
+		"user": {
+			"login": "habby1337"
+		},
+		"labels": [
+			{
+				"name": "Awaiting Approval"
+			}
+		],
+		"body": "⚠️ Do not change any name, just add the needed information ⚠️\n\n❗ Change the issue title to the car name and track with this format: bmw_m3_gt2@ks_nordschleife❗\n\nNOTE: Use the assetto corsa name of the car (i.e., ferrari_f40_s3)\nNOTE: Use the assetto corsa name of the track (i.e., ks_nordschleife)\n\n## Track Information:\n- **Track name:** Test\n- **Car name:** Testcar\n- **Lap Time:** 1:54\n\n## Additional Details:\n- **Track Temps (if applicable):**\n- **Driving Aids (if used):**\n- **Tires:** SS\n- **Link of Hotlap Video:** WHOT\n\n"
+	}
+}
