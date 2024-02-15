@@ -17,8 +17,10 @@ if (isClosed && hasLabel && hasSetupTag) {
 	const setupBlob = issue.body.match(/```ini([\s\S]*)```/)[1].trim();
 	const setupFilePath = `./setups/${carName}/${trackName}/${username}.ini`;
 
-	fs.mkdirSync(`./setups/${carName}/`, { recursive: true });
-	fs.mkdirSync(`./setups/${carName}/${trackName}/`, { recursive: true });
+	// fs.mkdirSync(`./setups/${carName}/`, { recursive: true });
+	// fs.mkdirSync(`./setups/${carName}/${trackName}/`, { recursive: true });
+	fs.mkdirSync(`./setups/${carName}`);
+	fs.mkdirSync(`./setups/${carName}/${trackName}`);
 	fs.writeFileSync(setupFilePath, setupBlob);
 
 	fs.writeFileSync(
