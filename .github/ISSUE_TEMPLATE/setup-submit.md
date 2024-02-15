@@ -21,3 +21,8 @@ Track temps (if applicable):
 Driving aids (if used): 
 Tires: 
 Link of hotlap video:
+
+Setup:
+```ini
+CHANGE THIS WITH SETUP
+```
