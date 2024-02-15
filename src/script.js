@@ -3,10 +3,11 @@ const path = require("path");
 
 const contextJson = fs.readFileSync("./context.json", "utf8");
 const context = JSON.parse(contextJson);
+console.log(context);
 const issue = context.issue;
-console.log(issue);
+// console.log(issue);
 const isClosed = issue.state === "closed";
-console.log(issue.labels);
+// console.log(issue.labels);
 // const hasLabel = issue.labels.map((label) => label.name).includes("Awaiting Approval");
 const hasLabel = issue.labels.some((label) => label.name === "Awaiting Approval");
 const hasSetupTag = issue.title.includes("[SETUP]");
@@ -14,8 +15,8 @@ const hasSetupTag = issue.title.includes("[SETUP]");
 if (isClosed && hasLabel && hasSetupTag) {
 	// get from issue.body the car and track name: **Track name:** Test\n- **Car name:** Testcar\n
 
-	const carName = issue.body.match(/\*\*Car name:\*\* (.*)/)[1].trim();
-	const trackName = issue.body.match(/\*\*Track name:\*\* (.*)/)[1].trim();
+	const carName = issue.body.match(/Car name: (.*)/)[1].trim();
+	const trackName = issue.body.match(/Track name: (.*)/)[1].trim();
 	console.log(carName, trackName);
 	const username = issue.user.login.trim();
 	const approvedBy = context.sender.login.trim();
